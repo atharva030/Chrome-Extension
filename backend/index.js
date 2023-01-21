@@ -1,7 +1,7 @@
 const express=require('express')
 var cors=require('cors')
 const mongoose=require('mongoose');
-require('dotenv').config({ path: './pass.env' });
+require('dotenv').config()
 const mongoURI=process.env.mongoURI
 const app = express()
 const port = 5000 
