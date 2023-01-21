@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.json());
 //Available Routes
 app.use('/auth',require('./routes/auth'))
-  
+mongoose.set("strictQuery", false);
 mongoose.connect(mongoURI,connectionParams).then(()=>{
     console.info("connected")
 }).catch((error)=>{
