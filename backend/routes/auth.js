@@ -9,7 +9,7 @@ const jwtSecretKey = process.env.JWT_SECRET_KEY || "atharva$$!oy";
 
 // ROUTE 1: create user using: POST "/api/auth/createuser" Dosen't require auth i.e. no login required
 
-router.post(
+router.get(
   "/getuser",
   [ ],
   async (req, res) => {
