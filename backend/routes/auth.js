@@ -8,15 +8,7 @@ const { body, validationResult } = require("express-validator");
 const jwtSecretKey = process.env.JWT_SECRET_KEY || "atharva$$!oy";
 
 // ROUTE 1: create user using: POST "/api/auth/createuser" Dosen't require auth i.e. no login required
-router.get("/user", [], async (req, res) => {
-  try {
-    console.log("Done!!w");
-  } catch (error) {
-    console.log(error.message);
-    res.status(500).send({ error: "Internal Server Error" });
-  }
-  //check whether the user with this email is exits or not?
-});
+
 router.post(
   "/createuser",
   [
