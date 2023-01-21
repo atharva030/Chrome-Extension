@@ -1,8 +1,8 @@
 const express=require('express')
 var cors=require('cors')
 const mongoose=require('mongoose');
-const mongoURI="mongodb+srv://atharva_27:Pankhuri@cluster0.bhyubjd.mongodb.net/?retryWrites=true&w=majority"
-
+require('dotenv').config({ path: './env/pass.env' });
+const mongoURI=process.env.mongoURI
 const app = express()
 const port = 5000 
 const connectionParams={
